@@ -1,0 +1,355 @@
+
+@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+
+                
+
+:root{
+
+    --poke_font_family: 'Pokemon Solid', sans-serif;
+    --h1-size: 100px;
+    --text-color: rgb(255, 255, 255);
+    --link-hover-color: yellow;
+    --link-transition: .2s;
+    --reg-text-size: 21px;
+    --letter-spaces: 10px;
+    --h3-letter-spaces: 4px;
+    --grey:rgb(114, 113, 113);
+    --button-layout{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+   
+}
+
+div{
+    font-family: var(--poke_font_family);
+}
+
+
+::-webkit-scrollbar{
+    width: 0px;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(185, 184, 184);
+}
+
+.app{
+    width: 80%;
+    height: 90vh;
+    transform: translateX(10%)translateY(5%);
+    background-color:rgb(54, 54, 54) ;
+    overflow: hidden;
+    box-shadow: 0px 5px 5px black,
+     inset 3px 2px 10px black;
+}
+
+.heading1{
+    font-family: var(--poke_font_family);
+    letter-spacing: var(--letter-spaces);
+    color: var(--text-color);
+    font-size: var(--h1-size);
+    position: absolute;
+    animation: h1-slide .9s forwards;
+
+}
+
+@keyframes h1-slide {
+    0%{
+        transform: translateY(-15vh)translateX(-50vw);
+    }100%{
+        transform: translateY(-15vh)translateX(2vw);
+    }
+}
+
+.heading-cred{
+    font-family: var(--poke_font_family);
+    color: var(--link-hover-color);
+    font-size: var(--reg-text-size);
+    position: absolute;
+    transform: translateY(20vh)translateX(3.5vw);
+    letter-spacing: var(--h3-letter-spaces) ;
+    animation: h3-slideup .6s forwards;
+    animation-delay: .8s;
+    opacity: 0;
+}
+
+@keyframes h3-slideup {
+    0%{
+        transform: translateY(24vh)translateX(3.5vw);
+        opacity: 0;
+    }100%{
+        transform: translateY(20vh)translateX(3.5vw);
+        opacity: 1;
+    }
+}
+
+input{
+    background: none;
+    padding: 16px;
+    border-width: 1px;
+    color: white;
+    border-color: white;
+    font-style: italic;
+    transition: var(--link-transition);
+}
+
+input:focus{
+    outline: none;
+}
+
+input::placeholder{
+    color: white;
+}
+
+input:hover{
+    border-color: red;
+}
+
+input:hover::placeholder{
+    border-color: red;
+}
+
+
+
+#pokemon-name-input{
+    transform: translateY(40vh)translateX(2vw);
+    width: 200px;
+    
+}
+
+#Search{
+    color: rgb(0, 0, 0);
+    background-color: var();
+    font-family: var(--poke_font_family);
+    width:90px ;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    letter-spacing: var(--h3-letter-spaces);
+    border-width: .3px;
+    border-radius: 15px;
+    transition: var(--link-transition);
+    transform: translateY(45vh)translateX(2vw);
+    background-color: rgb(242, 225, 33);
+}
+
+#Search:hover{
+    background-color: rgb(62, 145, 239);
+    color: rgb(255, 255, 255);
+    transform: translateY(44vh)translateX(2vw);
+}
+
+.img-con{
+    width: 300px;
+    height: 350px;
+    border: 0px solid white;
+    transform: translateX(54vw)translateY(-8vh);
+    border-radius: 15%;
+    background-color: var(--grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--link-transition);
+}
+
+.img-con:hover{
+    transform: translateX(54vw)translateY(-9vh);
+    box-shadow: 3px 3px 9px black;
+}
+
+.img-con img{
+    width: 70%;
+    height: 70%;
+    border: 0px solid;
+    animation: img-float 2s ease-in-out infinite;
+}
+
+@keyframes img-float {
+    0%{
+        transform: translateY(0vh);
+    }50%{
+        transform: translateY(-3vh);
+    }100%{
+        transform: translateY(0vh);
+    }
+}
+
+#clear{
+    color: rgb(0, 0, 0);
+    background-color: var();
+    font-family: var(--poke_font_family);
+    width:90px ;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(242, 225, 33);
+    letter-spacing: var(--h3-letter-spaces);
+    border-width: .3px;
+    border-radius: 15px;
+    transition: var(--link-transition);
+    transform: translateY(38.5vh)translateX(10vw);
+}
+
+#clear:hover{
+    background-color: rgb(247, 44, 37);
+    color: rgb(255, 255, 255);
+    transform: translateY(37vh)translateX(10vw);
+}
+
+.stats-con{
+    width: 380px;
+    height: 350px;
+    border: 0px solid white;
+    transform: translateX(23vw)translateY(-26.5vh);
+    border-radius: 10%;
+    background-color: rgb(240, 106, 106);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    font-size: var(--reg-text-size);
+    color: rgb(59, 56, 56);
+    overflow: hidden;
+    color: rgb(249, 233, 204);
+    transition: var(--link-transition) ease-in-out;
+    color: lightskyblue;
+}
+
+.stats-con:hover{
+    transform: translateX(23vw)translateY(-27.5vh);
+    box-shadow: 3px 3px 9px black;
+}
+
+.stats-con div{
+    width: 100%;
+    transition: var(--link-transition);
+    text-align: center;
+    border-bottom: .5px solid  rgb(59, 56, 56) ;
+    border-width: 0px;
+    letter-spacing: 3px;
+}
+
+.stats-con div:hover{
+    color: black;
+    border-width: 0px;
+    
+}
+
+
+.ability-con{
+    width: 300px;
+    height: 180px;
+    border: 0px solid white;
+    transform: translateX(54vw)translateY(-51vh);
+    border-radius: 30px;
+    background-color:lightskyblue;
+    overflow: hidden;
+    color: rgb(240, 231, 216);
+    transition: var(--link-transition);
+    color: lightcoral;
+    
+}
+
+.ability-con:hover{
+    transform: translateX(54vw)translateY(-52vh);
+    box-shadow: 3px 3px 9px black;
+}
+
+.ability-con div{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.ability-con h2{
+    text-align: center;
+    transform: translateY(-3vh);
+    letter-spacing: 5px;
+    border-bottom: 0px solid;
+    color: lightcoral;
+    overflow: hidden;
+}
+
+#h2-slidedown{
+    animation: h2-slidedown .5s ease-in-out forwards;
+}
+
+@keyframes h2-slidedown {
+    0%{
+        transform: translateY(-10vh);
+    }100%{
+        transform: translateY(-3vh);
+    }
+}
+
+.ability-div:hover{
+    transition: .3s;
+    color: black;
+    
+}
+
+.ability-div{
+    width: 50%;
+    
+}
+
+.mini-con{
+    width: 100%;
+    overflow-y: scroll;
+    border: 0px solid;
+    height: 60%;
+    transform: translateY(-6vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    letter-spacing: 3px;
+    
+   
+
+}
+
+.history-con{
+    width: 250px;
+    height: 200px;
+    border: 0px solid;
+    background-color: lightyellow;
+    top: 0;
+    left: 0;
+    position: fixed;
+    border-radius: 30px;
+    transform: translateY(60.5vh)translateX(2vw);
+    transition: var(--link-transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.history-con img{
+    width: 70%;
+    animation: float-2 1.5s ease-in-out infinite;
+}
+
+@keyframes float-2 {
+    0%{
+        transform: translateY(0vh);
+    }50%{
+        transform: translateY(1.5vh);
+    }100%{
+        transform: translateY(0vh);
+    }
+}
+
+.history-con:hover{
+    transform: translateY(59.4vh)translateX(2vw);
+    box-shadow: 3px 3px 9px black;
+    transition: var(--link-transition);
+}
